@@ -1,0 +1,90 @@
+:root{
+--very-dark-desaturated-blue: hsl(238, 29%, 16%);
+--soft-red: hsl(14, 88%, 65%);
+
+/*Background gradient:*/
+
+--soft-violet: rgb(175, 103, 233);
+--soft-blue: rgb(101, 101, 231);
+
+/*Dividers*/
+
+--lightgrayish-blue: hsl(240, 5%, 91%);
+
+}
+
+
+.principal {
+
+    background: linear-gradient(to bottom, rgb(175, 103, 233),rgb(101, 101, 231));
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+
+    padding-top: 80px;
+    padding-bottom: 100px;
+    max-width: 400px;
+    flex-shrink: 0;
+    flex-grow: 1;
+   
+}
+
+h1{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about{
+    width: 220px;
+    text-align: center;
+}
+
+.acordeon{
+    background-color: white;
+    border-radius: 15px;
+    
+}
+
+.acordeon-item{
+    font-size: 12px;
+}
+
+.acordeon input {
+    display: none;
+}
+  
+.acordeon-title {
+   display: block;
+   padding: 15px;
+   background: white;
+   color: black;
+   font-size: 20px;
+   cursor: pointer;
+   border-bottom: 1px solid black;
+}
+
+.acordeon-title:hover {
+   background: white;
+   color: var(--soft-red);
+   
+}
+  
+ .acordeon-content {
+   height: 0;
+   overflow: hidden;
+   margin: 0;
+   transition: all 0.5s;
+   color: var(--very-dark-desaturated-blue);
+   font-size: 12px;
+   font-weight: 400;
+}
+  
+.acordeon input:checked ~ .acordeon-content{
+   height: auto;
+   margin: 15px 0;
+}
+
+.acordeon input:checked ~ .acordeon-title{
+    font-weight: 700;
+}
